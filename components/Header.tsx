@@ -15,8 +15,8 @@ const Header = () => {
         Dashboard
       </h1>
 
-      <div className="w-full md:w-fit mr-5 flex flex-col md:flex-row items-center gap-3 md:gap-5">
-        <div className="flex gap-5 flex-col sm:flex-row">
+      <div className="w-[90%] md:w-fit md:mr-5 flex flex-col md:flex-row ml-5 md:ml-0 md:items-center gap-3 md:gap-5">
+        <div className="flex gap-5 flex-col justify-between md:justify-normal sm:flex-row">
           <div className="w-full md:w-[35vh] border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-[48px] rounded-full px-3 flex items-center gap-2">
             <SearchIcon className="text-[#78828A] dark:text-white" />
             <input
@@ -26,7 +26,7 @@ const Header = () => {
             />
           </div>
 
-          <div className="flex flex-row items-center gap-5">
+          <div className="w-full md:w-fit flex flex-row justify-between md:justify-normal items-center gap-5">
             <h3 className="text-[#26282C] dark:text-gray-500 font-medium text-[14px] flex items-center gap-2">
               <CalendarMonthRoundedIcon className="text-[#26282C] dark:text-gray-400" />
               <span className="lg:inline md:hidden">{getCurrentDate()}</span>
@@ -38,7 +38,7 @@ const Header = () => {
           </div>
         </div>
 
-        <button className="w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-fit py-1 rounded-full px-3 flex items-center gap-2">
+        <button className="w-full md:w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-fit py-1 rounded-full px-3 flex justify-between items-center gap-2">
           <Image
             src="/assets/images/user1.svg"
             width={40}
