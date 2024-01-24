@@ -1,5 +1,6 @@
-import React from "react";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+import { SALES_AMOUNT, SALES_CHART } from "@/data/sales";
+import Image from "next/image";
 
 const SalesTrend = () => {
   return (
@@ -22,6 +23,42 @@ const SalesTrend = () => {
             <KeyboardArrowDownOutlinedIcon className="text-[#26282C]" />
           </div>
         </button>
+      </div>
+
+      <div className="w-full flex items-end gap-8 overflow-auto">
+        <ul className="flex flex-col gap-5">
+          {SALES_AMOUNT.map((item) => (
+            <li key={item.id} className="text-[12px] text-[#525252] font-[600]">
+              {item.amount}
+            </li>
+          ))}
+        </ul>
+
+        <ul className="w-full justify-between mt-auto flex gap-6">
+          {SALES_CHART.map((item) => (
+            <li key={item.id} className="flex flex-col gap-3 items-center">
+              {item.topSale && (
+                <Image
+                  src="/assets/images/top-sale.svg"
+                  width={100}
+                  height={100}
+                  alt="Chart"
+                  className="mt-auto"
+                />
+              )}
+              <Image
+                src={item.chartImg}
+                width={30}
+                height={item.height}
+                alt="Chart"
+                className="mt-auto"
+              />
+              <span className="text-[14px] text-[#525252] font-[600]">
+                {item.month}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
