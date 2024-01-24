@@ -19,40 +19,41 @@ const LastOrders = () => {
         </Link>
       </div>
 
-      <table className="table-auto mt-5 w-full overflow-auto">
-        <thead>
-          <tr className="border-b-[1.5px]  border-[#E9EAEC]">
-            <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
-              Name
-            </th>
-            <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
-              Date
-            </th>
-            <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
-              Amount
-            </th>
-            <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
-              Status
-            </th>
-            <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
-              Invoice
-            </th>
-          </tr>
-        </thead>
-
-        <tbody className="overflow-auto w-full">
-          {LAST_ORDERS.map((item) => (
-            <Order
-              key={item.id}
-              profilePic={item.profilePic}
-              name={item.name}
-              date={item.date}
-              amount={item.amount}
-              paid={item.paid}
-            />
-          ))}
-        </tbody>
-      </table>
+      <div className="w-[100vh] md:w-full overflow-auto">
+        <table className="mt-5 w-full table-auto overflow-auto">
+          <thead>
+            <tr className="w-full border-b-[1.5px]  border-[#E9EAEC]">
+              <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
+                Name
+              </th>
+              <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
+                Date
+              </th>
+              <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
+                Amount
+              </th>
+              <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
+                Status
+              </th>
+              <th className="text-[#9CA4AB] w-fit text-left text-[16px] font-[400] pb-5">
+                Invoice
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {LAST_ORDERS.map((item) => (
+              <Order
+                key={item.id}
+                profilePic={item.profilePic}
+                name={item.name}
+                date={item.date}
+                amount={item.amount}
+                paid={item.paid}
+              />
+            ))}
+          </tbody>
+        </table>
+      </div>
     </section>
   );
 };

@@ -15,9 +15,9 @@ const Header = () => {
         Dashboard
       </h1>
 
-      <div className="mr-5 flex flex-col md:flex-row items-center gap-3 md:gap-5">
+      <div className="w-full md:w-fit mr-5 flex flex-col md:flex-row items-center gap-3 md:gap-5">
         <div className="flex gap-5 flex-col sm:flex-row">
-          <div className="w-[30vh] border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-[48px] rounded-full px-3 flex items-center gap-2">
+          <div className="w-full md:w-[35vh] border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-[48px] rounded-full px-3 flex items-center gap-2">
             <SearchIcon className="text-[#78828A] dark:text-white" />
             <input
               type="text"

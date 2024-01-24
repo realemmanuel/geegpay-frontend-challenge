@@ -11,9 +11,9 @@ type Props = {
 
 const Order: FC<Props> = ({ profilePic, name, date, amount, paid }) => {
   return (
-    <tr className="overflow-auto w-full">
+    <tr>
       <td>
-        <div className="w-full flex gap-2 items-center my-3">
+        <div className="flex gap-2 items-center my-3">
           <Image
             src={profilePic}
             width={30}

@@ -40,7 +40,7 @@ const Sidebar = () => {
           </ul>
         </div>
 
-        <ul className="my-5 bg-white p-2 rounded-full w-[60%] mx-auto flex flex-col gap-2">
+        <ul className="my-10 bg-white p-2 rounded-full w-[60%] mx-auto flex flex-col items-center gap-2">
           <button onClick={() => setTheme("light")}>
             <Image
               src="/assets/images/day.svg"
