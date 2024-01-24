@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Geegpay Frontend Hackathon Challenge
+
+This is my Geegpay hackathon challenge repository.
+
+## Features
+
+- **Responsive On All Devices**
+
+- **Supports Darkmode and Light Mode**
+
+- **Easy To Navigate And Quick**
+
+## Technologies Used
+
+### Frontend
+
+- **Next.js 14:** Powers the frontend, enabling seamless navigation and rendering of pages. It optimizes performance by providing server-side rendering.
+
+- **Typescript:** Enhances code quality and maintainability by enforcing static typing. It catches errors during development, leading to a more reliable and robust frontend.
+
+- **Tailwind CSS:** Styles the user interface with a utility-first approach, making it easy to create responsive and visually appealing designs.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/realemmanuel/geegpay-frontend-challenge.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Contributing
+
+1. Fork the repository: Click the "Fork" button at the top-right of the repository.
+
+2. Clone your fork:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/realemmanuel/geegpay-frontend-challenge.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Create a new branch:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+git checkout -b feature/your-feature-name
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+2. Make your changes and commit:
 
-## Learn More
+```bash
+git add .
+git commit -m "feat: describe your changes"
+```
 
-To learn more about Next.js, take a look at the following resources:
+2. Push your changes:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git push origin feature/your-feature-name
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+3. Open a pull request: Go to the original repository and click on "New pull request." Describe your changes and submit the pull request.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#
