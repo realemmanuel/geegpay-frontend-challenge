@@ -28,7 +28,7 @@ const SalesTrend = () => {
       <div className="w-full flex items-end gap-8 overflow-auto">
         <ul className="flex flex-col gap-5">
           {SALES_AMOUNT.map((item) => (
-            <li key={item.id} className="text-[12px] text-[#525252] font-[600]">
+            <li key={item.id} className="text-[12px] text-[#525252] dark:text-gray-400 font-[600]">
               {item.amount}
             </li>
           ))}
@@ -51,9 +51,9 @@ const SalesTrend = () => {
                 width={30}
                 height={item.height}
                 alt="Chart"
-                className="mt-auto"
+                className="mt-auto dark:filter dark:invert"
               />
-              <span className="text-[14px] text-[#525252] font-[600]">
+              <span className="text-[14px] text-[#525252] dark:text-gray-400 font-[600]">
                 {item.month}
               </span>
             </li>
