@@ -20,6 +20,9 @@ This is my Geegpay hackathon challenge repository.
 
 - **Tailwind CSS:** Styles the user interface with a utility-first approach, making it easy to create responsive and visually appealing designs.
 
+- **Redux:** Manages the global state of the application, ensuring a consistent user experience and facilitating communication between different components.
+
+
 ## Getting Started
 
 1. Clone the repository:

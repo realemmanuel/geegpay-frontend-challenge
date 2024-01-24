@@ -22,7 +22,7 @@ const Header = () => {
   return (
     <header className="md:sticky md:top-0 bg-white dark:bg-background w-full h-fit pb-2 md:h-[85px] flex flex-col md:flex-row gap-5 justify-between  md:items-center py-2 border-b-[1px]">
       <div className="ml-5 flex w-[90%] md:hidden justify-between">
-        <h1 className="text-[#26282C] dark:text-gray-400 text-[25px] font-[400]">
+        <h1 className="text-[#26282C] dark:text-gray-400 text-[25px] font-[600]">
           Dashboard
         </h1>
 
