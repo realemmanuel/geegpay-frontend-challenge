@@ -7,11 +7,40 @@ import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import { getCurrentDate } from "@/lib/utils";
+import { useAppDispatch, useAppSelector } from "@/lib/hooks";
+import {
+  openSidebar,
+  closeSidebar,
+} from "@/lib/features/sidebar/sidebar-slice";
+import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Header = () => {
+  const dispatch = useAppDispatch();
+  const isOpen = useAppSelector((state) => state.sidebar.isOpen);
+
   return (
     <header className="md:sticky md:top-0 bg-white dark:bg-background w-full h-fit pb-2 md:h-[85px] flex flex-col md:flex-row gap-5 justify-between  md:items-center py-2 border-b-[1px]">
-      <h1 className="text-[#26282C] dark:text-gray-400 text-[25px] font-[400] ml-5">
+      <div className="ml-5 flex w-[90%] md:hidden justify-between">
+        <h1 className="text-[#26282C] dark:text-gray-400 text-[25px] font-[400]">
+          Dashboard
+        </h1>
+
+        <button
+          className="border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 rounded-full p-[7px] w-fit h-fit flex items-center"
+          onClick={() => {
+            if (isOpen) {
+              dispatch(closeSidebar());
+            } else {
+              dispatch(openSidebar());
+            }
+          }}
+        >
+          {isOpen ? <CloseIcon /> : <DashboardRoundedIcon />}
+        </button>
+      </div>
+
+      <h1 className="text-[#26282C] dark:text-gray-400 text-[25px] font-[400] ml-5 hidden md:inline">
         Dashboard
       </h1>
 

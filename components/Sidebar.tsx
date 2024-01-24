@@ -5,13 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
+import { useAppSelector } from "@/lib/hooks";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const isOpen = useAppSelector((state) => state.sidebar.isOpen);
   const { setTheme } = useTheme();
 
   return (
-    <nav className="w-[20%] sm:w-[10%] md:w-[9%] lg:w-[8%] xl:w-[5%] bg-[#F7F8FA] border-r-[1px] dark:bg-gray-900 top-0 bottom-0 fixed left-0 overflow-y-auto overflow-hidden duration-500">
+    <nav
+      className={`${
+        isOpen
+          ? "w-[20%] sm:w-[10%] md:w-[9%] lg:w-[8%] xl:w-[5%] bg-[#F7F8FA] border-r-[1px] dark:bg-gray-900 top-0 bottom-0 fixed left-0 overflow-y-auto overflow-hidden duration-500"
+          : "hidden"
+      }`}
+    >
       <div className="flex flex-col justify-between h-full">
         <div>
           <Image
