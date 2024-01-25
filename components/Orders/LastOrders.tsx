@@ -44,6 +44,7 @@ const LastOrders = () => {
             {LAST_ORDERS.map((item) => (
               <Order
                 key={item.id}
+                id={item.id}
                 profilePic={item.profilePic}
                 name={item.name}
                 date={item.date}

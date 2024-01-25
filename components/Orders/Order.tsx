@@ -3,6 +3,7 @@ import React, { FC } from "react";
 import OrderModal from "./OrderModal";
 
 type Props = {
+  id: number;
   profilePic: string;
   name: string;
   date: string;
@@ -10,18 +11,12 @@ type Props = {
   paid: boolean;
 };
 
-const Order: FC<Props> = ({ profilePic, name, date, amount, paid }) => {
+const Order: FC<Props> = ({ profilePic, name, date, amount, paid, id }) => {
   return (
     <tr>
       <td>
         <div className="flex gap-2 items-center my-3">
-          <Image
-            src={profilePic}
-            width={30}
-            height={30}
-            alt="Profile pic"
-            className="dark:filter dark:invert"
-          />
+          <Image src={profilePic} width={30} height={30} alt="Profile pic" />
           <p className="text-[14px] w-fit font-[500] text-[#3A3F51] dark:text-gray-400">
             {name}
           </p>
@@ -51,7 +46,7 @@ const Order: FC<Props> = ({ profilePic, name, date, amount, paid }) => {
       </td>
 
       <td>
-        <OrderModal />
+        <OrderModal orderId={id} />
       </td>
     </tr>
   );

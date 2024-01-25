@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 import {
   AlertDialog,
   AlertDialogCancel,
@@ -10,8 +10,13 @@ import CloseIcon from "@mui/icons-material/Close";
 import PrintRoundedIcon from "@mui/icons-material/PrintRounded";
 import DownloadForOfflineRoundedIcon from "@mui/icons-material/DownloadForOfflineRounded";
 import QuestionAnswerRoundedIcon from "@mui/icons-material/QuestionAnswerRounded";
+import { LAST_ORDERS } from "@/data/orders";
 
-const OrderModal = () => {
+type Props = {
+  orderId: number;
+};
+
+const OrderModal: FC<Props> = ({ orderId }) => {
   return (
     <AlertDialog>
       <AlertDialogTrigger>
@@ -37,55 +42,59 @@ const OrderModal = () => {
             </AlertDialogCancel>
           </div>
 
-          <div className="flex flex-col gap-2">
-            <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
-              Name
-            </h1>
-            <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
-              Marcus Bergson
-            </p>
-          </div>
+          {LAST_ORDERS.filter((order) => order.id === orderId).map((order) => (
+            <div key={order.id} className="flex flex-col gap-5">
+              <div className="flex flex-col gap-2">
+                <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
+                  Name
+                </h1>
+                <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
+                  {order.name}
+                </p>
+              </div>
 
-          <div className="flex flex-col gap-2">
-            <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
-              Phone Number
-            </h1>
-            <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
-              +234 812-726-3872
-            </p>
-          </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
+                  Date
+                </h1>
+                <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
+                  {order.date}
+                </p>
+              </div>
 
-          <div className="flex flex-col gap-2">
-            <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
-              Amount
-            </h1>
-            <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
-              $80,000
-            </p>
-          </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
+                  Amount
+                </h1>
+                <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
+                  {order.amount}
+                </p>
+              </div>
 
-          <div className="flex flex-col gap-2">
-            <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
-              Status
-            </h1>
-            <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
-              Paid
-            </p>
-          </div>
+              <div className="flex flex-col gap-2">
+                <h1 className="font-[400] text-gray-700 dark:text-gray-300 text-[20px] md:text-[25px]">
+                  Status
+                </h1>
+                <p className="text-gray-400 dark:text-gray-400 text-[14px] md:text-[16px] font-[200]">
+                  {order.paid ? "Paid" : "Refund"}
+                </p>
+              </div>
 
-          <div className="flex justify-between flex-wrap gap-3">
-            <AlertDialogCancel>
-              <PrintRoundedIcon />
-            </AlertDialogCancel>
+              <div className="flex justify-between flex-wrap gap-3">
+                <AlertDialogCancel>
+                  <PrintRoundedIcon />
+                </AlertDialogCancel>
 
-            <AlertDialogCancel>
-              <DownloadForOfflineRoundedIcon />
-            </AlertDialogCancel>
+                <AlertDialogCancel>
+                  <DownloadForOfflineRoundedIcon />
+                </AlertDialogCancel>
 
-            <AlertDialogCancel>
-              <QuestionAnswerRoundedIcon />
-            </AlertDialogCancel>
-          </div>
+                <AlertDialogCancel>
+                  <QuestionAnswerRoundedIcon />
+                </AlertDialogCancel>
+              </div>
+            </div>
+          ))}
         </div>
       </AlertDialogContent>
     </AlertDialog>
