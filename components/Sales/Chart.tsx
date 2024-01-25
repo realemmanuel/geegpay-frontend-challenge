@@ -12,7 +12,7 @@ const Chart: FC<Props> = ({ src, height, amount }) => {
   return (
     <div className="w-full mt-auto transition-all duration-500 flex flex-col gap-3 items-center">
       {isHovered && (
-        <>
+        <div className="relative text-center w-fit flex flex-col items-center">
           <Image
             src="/assets/images/amount-box.svg"
             width={200}
@@ -23,7 +23,7 @@ const Chart: FC<Props> = ({ src, height, amount }) => {
           <span className="text-white mt-[4px] absolute text-[12px] font-[400]">
             {amount}
           </span>
-        </>
+        </div>
       )}
       <Image
         style={{
