@@ -34,8 +34,8 @@ const StatisticsCard: FC<Props> = ({
               ? "/assets/images/stats-increasing.svg"
               : "/assets/images/stats-decreasing.svg"
           }
-          width={160}
-          height={160}
+          width={100}
+          height={100}
           alt="Increasing"
         />
       </div>

@@ -1,6 +1,6 @@
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import { SALES_AMOUNT, SALES_CHART } from "@/data/sales";
 import Image from "next/image";
+import CalendarDropdown from "./CalendarDropdown";
 
 const SalesTrend = () => {
   return (
@@ -10,25 +10,16 @@ const SalesTrend = () => {
           Sales Trends
         </h3>
 
-        <button className="flex items-center gap-3">
-          <h4 className="text-[#3A3F51] dark:text-gray-300 text-[16px] font-[400]">
-            Short by:
-          </h4>
-
-          <div className="w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-500 h-fit py-1 rounded-full px-3 flex items-center gap-2">
-            <h4 className="text-[#26282C] dark:text-gray-300 text-[14px] font-[200]">
-              Weekly
-            </h4>
-
-            <KeyboardArrowDownOutlinedIcon className="text-[#26282C]" />
-          </div>
-        </button>
+        <CalendarDropdown />
       </div>
 
       <div className="w-full flex items-end gap-8 overflow-auto">
         <ul className="flex flex-col gap-5">
           {SALES_AMOUNT.map((item) => (
-            <li key={item.id} className="text-[12px] text-[#525252] dark:text-gray-400 font-[600]">
+            <li
+              key={item.id}
+              className="text-[12px] text-[#525252] dark:text-gray-400 font-[600]"
+            >
               {item.amount}
             </li>
           ))}

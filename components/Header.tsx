@@ -5,7 +5,6 @@ import Image from "next/image";
 import SearchIcon from "@mui/icons-material/Search";
 import CalendarMonthRoundedIcon from "@mui/icons-material/CalendarMonthRounded";
 import NotificationsNoneRoundedIcon from "@mui/icons-material/NotificationsNoneRounded";
-import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import { getCurrentDate } from "@/lib/utils";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import {
@@ -14,6 +13,7 @@ import {
 } from "@/lib/features/sidebar/sidebar-slice";
 import DashboardRoundedIcon from "@mui/icons-material/DashboardRounded";
 import CloseIcon from "@mui/icons-material/Close";
+import ProfileAvatar from "./ProfileAvatar";
 
 const Header = () => {
   const dispatch = useAppDispatch();
@@ -67,24 +67,7 @@ const Header = () => {
           </div>
         </div>
 
-        <button className="w-full md:w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-fit py-1 rounded-full px-3 flex justify-between items-center gap-2">
-          <Image
-            src="/assets/images/user1.svg"
-            width={40}
-            height={40}
-            alt="User"
-          />
-
-          <div className="flex lg:inline md:hidden flex-col items-end">
-            <h4 className="text-[#26282C] dark:text-white text-[16px] font-[400]">
-              Justin Bergson
-            </h4>
-            <span className="text-[14px] dark:text-gray-200 text-[#787486] font-[400]">
-              Justin@gmail.com
-            </span>
-          </div>
-          <KeyboardArrowDownOutlinedIcon className="text-[#26282C]" />
-        </button>
+        <ProfileAvatar />
       </div>
     </header>
   );

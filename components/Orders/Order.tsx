@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { FC } from "react";
+import OrderModal from "./OrderModal";
 
 type Props = {
   profilePic: string;
@@ -50,16 +51,7 @@ const Order: FC<Props> = ({ profilePic, name, date, amount, paid }) => {
       </td>
 
       <td>
-        <div className="flex items-center gap-1 text-[14px] font-[300] text-[#0D062D] dark:text-gray-400">
-          <Image
-            src="/assets/images/download.svg"
-            width={20}
-            height={20}
-            alt="Download Icon"
-            className="dark:filter dark:invert"
-          />
-          <span>View</span>
-        </div>
+        <OrderModal />
       </td>
     </tr>
   );
