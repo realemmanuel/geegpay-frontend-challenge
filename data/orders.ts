@@ -13,7 +13,7 @@ export const LAST_ORDERS = [
     name: "Marcus Bergson",
     date: "Nov 15, 2023",
     amount: "$80,000",
-    paid: true,
+    paid: false,
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const LAST_ORDERS = [
     name: "Marcus Bergson",
     date: "Nov 15, 2023",
     amount: "$80,000",
-    paid: true,
+    paid: false,
   },
   {
     id: 5,
