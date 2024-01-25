@@ -13,8 +13,8 @@ const CalendarDropdown = () => {
   return (
     <DropdownMenu>
       <div className="flex items-center gap-3">
-        <h4 className="text-[#3A3F51] dark:text-gray-300 text-[16px] font-[400]">
-          Short by:
+        <h4 className="text-[#3A3F51] hidden sm:inline dark:text-gray-300 text-[16px] font-[400]">
+          Sort by:
         </h4>
         <DropdownMenuTrigger>
           <div className="w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-500 h-fit py-1 rounded-full px-3 flex items-center gap-2">
