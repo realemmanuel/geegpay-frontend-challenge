@@ -12,7 +12,7 @@ const CalendarDropdown = () => {
 
   return (
     <DropdownMenu>
-      <button className="flex items-center gap-3">
+      <div className="flex items-center gap-3">
         <h4 className="text-[#3A3F51] dark:text-gray-300 text-[16px] font-[400]">
           Short by:
         </h4>
@@ -25,7 +25,7 @@ const CalendarDropdown = () => {
             <KeyboardArrowDownOutlinedIcon className="text-[#26282C]" />
           </div>
         </DropdownMenuTrigger>
-      </button>
+      </div>
 
       <DropdownMenuContent>
         <Calendar

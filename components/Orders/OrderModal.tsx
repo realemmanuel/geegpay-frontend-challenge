@@ -15,7 +15,7 @@ const OrderModal = () => {
   return (
     <AlertDialog>
       <AlertDialogTrigger>
-        <button className="flex items-center gap-1 text-[14px] font-[300] text-[#0D062D] dark:text-gray-400">
+        <div className="flex items-center gap-1 text-[14px] font-[300] text-[#0D062D] dark:text-gray-400">
           <Image
             src="/assets/images/download.svg"
             width={20}
@@ -24,7 +24,7 @@ const OrderModal = () => {
             className="dark:filter dark:invert"
           />
           <span>View</span>
-        </button>
+        </div>
       </AlertDialogTrigger>
       <AlertDialogContent>
         <div className="flex flex-col gap-5">

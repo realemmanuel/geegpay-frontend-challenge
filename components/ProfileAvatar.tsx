@@ -16,7 +16,7 @@ const ProfileAvatar = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <button className="w-full md:w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-fit py-1 rounded-full px-3 flex justify-between items-center gap-2">
+        <div className="w-full md:w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 h-fit py-1 rounded-full px-3 flex justify-between items-center gap-2">
           <Image
             src="/assets/images/user1.svg"
             width={40}
@@ -33,7 +33,7 @@ const ProfileAvatar = () => {
             </span>
           </div>
           <KeyboardArrowDownOutlinedIcon className="text-[#26282C]" />
-        </button>
+        </div>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent>
