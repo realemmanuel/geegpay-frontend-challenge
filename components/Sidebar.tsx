@@ -16,8 +16,6 @@ const Sidebar = () => {
   const { setTheme, theme } = useTheme();
   const [currentTheme, setCurrentTheme] = useState<string>("light");
 
-  console.log("Theme on the server:", theme);
-
   useEffect(() => {
     if (!theme) return;
     setCurrentTheme(theme);
@@ -58,10 +56,10 @@ const Sidebar = () => {
             ))}
           </ul>
         </div>
-        <div className="my-10 bg-white p-2 rounded-full w-[60%] mx-auto flex flex-col items-center gap-2">
+        <div className="my-10 bg-white dark:bg-[#181818] p-2 rounded-full w-[60%] mx-auto flex flex-col items-center gap-2">
           <button
             style={{
-              backgroundColor: currentTheme === "light" ? "#34CAA5" : "white",
+              backgroundColor: currentTheme === "light" ? "#34CAA5" : "#181818",
             }}
             className={`${
               currentTheme === "light"

@@ -25,11 +25,11 @@ const SalesTrend = () => {
           ))}
         </ul>
 
-        <ul className="w-full z-30 justify-between mt-auto flex gap-5">
+        <ul className="w-full z-30 justify-between mt-auto flex gap-5 overflow-auto">
           {SALES_CHART.map((item) => (
             <li
               key={item.id}
-              className="w-full transition-all duration-500 flex flex-col gap-3 items-center "
+              className="w-full transition-all duration-500 flex flex-col gap-3 items-center z-30"
             >
               <Chart
                 src={item.chartImg}
