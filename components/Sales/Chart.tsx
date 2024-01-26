@@ -18,9 +18,9 @@ const Chart: FC<Props> = ({ src, height, amount }) => {
             width={200}
             height={200}
             alt="Chart"
-            className="mt-auto min-w-fit"
+            className="mt-auto min-w-fit dark:filter dark:invert"
           />
-          <span className="text-white mt-[4px] absolute text-[12px] font-[400]">
+          <span className="text-white dark:text-black mt-[4px] absolute text-[12px] font-[400]">
             {amount}
           </span>
         </div>

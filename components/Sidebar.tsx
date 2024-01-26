@@ -6,11 +6,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { useAppSelector } from "@/lib/hooks";
+import LightModeIcon from "@mui/icons-material/LightMode";
+import NightsStayIcon from "@mui/icons-material/NightsStay";
 
 const Sidebar = () => {
   const pathname = usePathname();
   const isOpen = useAppSelector((state) => state.sidebar.isOpen);
-  const { setTheme } = useTheme();
+  const { setTheme, theme } = useTheme();
 
   return (
     <nav
@@ -48,29 +50,31 @@ const Sidebar = () => {
           </ul>
         </div>
 
-        <ul className="my-10 bg-white p-2 rounded-full w-[60%] mx-auto flex flex-col items-center gap-2">
-          <button onClick={() => setTheme("light")}>
-            <Image
-              src="/assets/images/day.svg"
-              width={40}
-              height={40}
-              alt="Day icon"
-              className=""
-            />
+        <div className="my-10 bg-white p-2 rounded-full w-[60%] mx-auto flex flex-col items-center gap-2">
+          <button
+            className={`${
+              theme === "light"
+                ? "w-fit h-fit p-[6px] bg-[#34CAA5] rounded-full flex text-white"
+                : "w-fit h-fit p-[6px] text-gray-500 bg-white"
+            }`}
+            onClick={() => setTheme("light")}
+          >
+            <LightModeIcon fontSize="small" />
           </button>
 
-          <button onClick={() => setTheme("dark")}>
-            <Image
-              src="/assets/images/night.svg"
-              width={40}
-              height={40}
-              alt="Day icon"
-              className=""
-            />
+          <button
+            className={`${
+              theme === "dark"
+                ? "w-fit h-fit p-[6px] bg-[#34CAA5] rounded-full flex text-white"
+                : "w-fit h-fit p-[6px] text-gray-500"
+            }`}
+            onClick={() => setTheme("dark")}
+          >
+            <NightsStayIcon fontSize="small" />
           </button>
-        </ul>
+        </div>
 
-        <ul className="mt-auto mb-5 pb-10 flex flex-col items-center gap-5">
+        <div className="mt-auto mb-5 pb-10 flex flex-col items-center gap-5">
           {SIDEBAR_BOTTOM_LINKS.map((link) => (
             <Link href="/" key={link.id}>
               <Image
@@ -82,7 +86,7 @@ const Sidebar = () => {
               />
             </Link>
           ))}
-        </ul>
+        </div>
       </div>
     </nav>
   );
