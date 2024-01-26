@@ -11,7 +11,7 @@ const LastOrders = () => {
 
   return (
     <section className="md:mx-5 xl:mx-0 xl:ml-5 bg-white dark:bg-[#181818] w-[97%] xl:w-[60%] h-fit md:h-[400px] rounded-[14px] border-[#EDF2F7] dark:border-[#333a40] border-[1px] flex flex-col gap-5 p-5 overflow-auto">
-      <div className={`sm:w-[80%] md:w-full flex justify-between items-center absolute md:static ${isOpen ? "w-[70%] ":""} `}>
+      <div className={`sm:w-[80%] md:w-full flex justify-between items-center absolute md:static ${isOpen ? "w-[70%] ":"w-[85%]"} `}>
         <h3 className="text-[#26282C] dark:text-gray-300 text-[17px] md:text-[20px] font-[400]">
           Last Orders
         </h3>
