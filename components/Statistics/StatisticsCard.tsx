@@ -17,7 +17,7 @@ const StatisticsCard: FC<Props> = ({
   comparePercentage,
 }) => {
   return (
-    <div className="bg-white dark:bg-gray-600 border-[#EDF2F7] dark:border-[#3d6185] border-[1px] xl:h-[200px] p-2 rounded-[14px] flex flex-col justify-between gap-2">
+    <div className="bg-white dark:bg-slate-900 border-[#EDF2F7] dark:border-[#333a40] border-[1px] xl:h-[200px] p-2 rounded-[14px] flex flex-col justify-between gap-2">
       <div className="flex justify-between items-center">
         <Image
           className="border-[0.4px] border-[#78828A] bg-white dark:bg-gray-600 rounded-full p-[7px] w-fit h-fit flex items-center"

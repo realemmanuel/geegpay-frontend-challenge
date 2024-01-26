@@ -11,6 +11,8 @@ import PrintRoundedIcon from "@mui/icons-material/PrintRounded";
 import DownloadForOfflineRoundedIcon from "@mui/icons-material/DownloadForOfflineRounded";
 import QuestionAnswerRoundedIcon from "@mui/icons-material/QuestionAnswerRounded";
 import { LAST_ORDERS } from "@/data/orders";
+import { DropdownMenuSeparator } from "@/components/ui/dropdown-menu";
+import ReceiptOutlinedIcon from "@mui/icons-material/ReceiptOutlined";
 
 type Props = {
   orderId: number;
@@ -34,13 +36,25 @@ const OrderModal: FC<Props> = ({ orderId }) => {
       <AlertDialogContent>
         <div className="flex flex-col gap-5">
           <div className="w-full flex items-center justify-between">
-            <h3 className="text-gray-700 dark:text-gray-300 text-[25px] md:text-[30px] font-bold">
-              Invoice
-            </h3>
+            <div className="flex items-start gap-2">
+              <ReceiptOutlinedIcon className="mt-3" />
+              <div className="flex flex-col">
+                <h3 className="text-gray-700 dark:text-gray-300 text-[25px] md:text-[30px] font-bold">
+                  Invoice
+                </h3>
+
+                <p className="text-gray-700 dark:text-gray-300 text-[14px] md:text-[14px] font-[200]">
+                  Access has been granted
+                </p>
+              </div>
+            </div>
+
             <AlertDialogCancel>
               <CloseIcon />
             </AlertDialogCancel>
           </div>
+
+          <DropdownMenuSeparator />
 
           {LAST_ORDERS.filter((order) => order.id === orderId).map((order) => (
             <div key={order.id} className="flex flex-col gap-5">

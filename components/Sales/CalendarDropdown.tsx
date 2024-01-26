@@ -17,12 +17,12 @@ const CalendarDropdown = () => {
           Sort by:
         </h4>
         <DropdownMenuTrigger>
-          <div className="w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-gray-500 h-fit py-1 rounded-full px-3 flex items-center gap-2">
+          <div className="w-fit border-[0.4px] border-[#78828A] bg-white dark:bg-transparent  h-fit py-1 rounded-full px-3 flex items-center gap-2">
             <h4 className="text-[#26282C] dark:text-gray-300 text-[14px] font-[200]">
               Weekly
             </h4>
 
-            <KeyboardArrowDownOutlinedIcon className="text-[#26282C]" />
+            <KeyboardArrowDownOutlinedIcon className="text-[#26282C] dark:text-gray-300" />
           </div>
         </DropdownMenuTrigger>
       </div>

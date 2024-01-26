@@ -5,7 +5,7 @@ import Order from "./Order";
 
 const LastOrders = () => {
   return (
-    <section className="md:mx-5 bg-white dark:bg-gray-600 w-[97%] xl:w-[60%] h-fit md:h-[400px] rounded-[14px] border-[#EDF2F7] dark:border-[#3d6185] border-[1px] flex flex-col gap-5 p-5 overflow-auto">
+    <section className="md:mx-5 bg-white dark:bg-slate-900 w-[97%] xl:w-[60%] h-fit md:h-[400px] rounded-[14px] border-[#EDF2F7] dark:border-[#333a40] border-[1px] flex flex-col gap-5 p-5 overflow-auto">
       <div className="w-[70%] sm:w-[80%] md:w-full flex justify-between items-center absolute md:static">
         <h3 className="text-[#26282C] dark:text-gray-300 text-[17px] md:text-[20px] font-[400]">
           Last Orders

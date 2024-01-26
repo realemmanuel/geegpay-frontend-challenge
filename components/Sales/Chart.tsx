@@ -37,7 +37,7 @@ const Chart: FC<Props> = ({ src, height, amount }) => {
         width={30}
         height={100}
         alt="Chart"
-        className="dark:filter dark:invert  rounded-t-full transition-all duration-500"
+        className="dark:filter dark:invert rounded-t-full cursor-pointer"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       />
