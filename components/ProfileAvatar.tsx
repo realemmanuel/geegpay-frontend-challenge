@@ -16,7 +16,7 @@ const ProfileAvatar = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger>
-        <div className="w-full md:w-fit border-[0.4px] border-[#78828A] dark:border-[#333a40] bg-white dark:bg-slate-900 h-fit py-1 rounded-full px-3 flex justify-between items-center gap-2">
+        <div className="w-full md:w-fit border-[0.4px] border-[#78828A] dark:border-[#333a40] bg-white dark:bg-black h-fit py-1 rounded-full px-3 flex justify-between items-center gap-2">
           <Image
             src="/assets/images/user1.svg"
             width={40}

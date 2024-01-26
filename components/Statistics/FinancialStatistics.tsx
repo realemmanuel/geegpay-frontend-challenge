@@ -6,7 +6,7 @@ import StatisticsCard from "./StatisticsCard";
 
 const FinancialStatistics = () => {
   return (
-    <section className="mx-5 grid grid-cols-1 md:grid-cols-2 gap-3 w-[97%] xl:w-[40%]">
+    <section className="mx-5 xl:mx-0 xl:mr-5 grid grid-cols-1 md:grid-cols-2 gap-3 w-[97%] xl:w-[40%]">
       {STATISTICS_DATA.map((data) => (
         <StatisticsCard
           key={data.id}
