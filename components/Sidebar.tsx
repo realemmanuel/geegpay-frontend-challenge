@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { SIDEBAR_BOTTOM_LINKS, SIDEBAR_LINKS } from "@/data/sidebar";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +14,14 @@ const Sidebar = () => {
   const pathname = usePathname();
   const isOpen = useAppSelector((state) => state.sidebar.isOpen);
   const { setTheme, theme } = useTheme();
+  const [currentTheme, setCurrentTheme] = useState<string>("light");
+
+  console.log("Theme on the server:", theme);
+
+  useEffect(() => {
+    if (!theme) return;
+    setCurrentTheme(theme);
+  }, [theme]);
 
   return (
     <nav
@@ -49,13 +58,15 @@ const Sidebar = () => {
             ))}
           </ul>
         </div>
-
         <div className="my-10 bg-white p-2 rounded-full w-[60%] mx-auto flex flex-col items-center gap-2">
           <button
+            style={{
+              backgroundColor: currentTheme === "light" ? "#34CAA5" : "white",
+            }}
             className={`${
-              theme === "light"
-                ? "w-fit h-fit p-[6px] bg-[#34CAA5] rounded-full flex text-white"
-                : "w-fit h-fit p-[6px] text-gray-500 bg-white"
+              currentTheme === "light"
+                ? "w-fit h-fit p-[6px]  rounded-full flex text-white"
+                : "w-fit h-fit p-[6px] text-gray-500 "
             }`}
             onClick={() => setTheme("light")}
           >
@@ -63,9 +74,12 @@ const Sidebar = () => {
           </button>
 
           <button
+            style={{
+              backgroundColor: currentTheme === "dark" ? "#34CAA5" : "white",
+            }}
             className={`${
-              theme === "dark"
-                ? "w-fit h-fit p-[6px] bg-[#34CAA5] rounded-full flex text-white"
+              currentTheme === "dark"
+                ? "w-fit h-fit p-[6px] rounded-full flex text-white"
                 : "w-fit h-fit p-[6px] text-gray-500"
             }`}
             onClick={() => setTheme("dark")}

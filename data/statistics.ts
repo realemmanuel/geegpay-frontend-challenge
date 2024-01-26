@@ -16,7 +16,7 @@ export const STATISTICS_DATA = [
     comparePercentage: 23.5,
   },
   {
-    id: 1,
+    id: 3,
     icon: "/assets/images/icon3.svg",
     total: 1567,
     totalText: "Average Sales",
@@ -24,7 +24,7 @@ export const STATISTICS_DATA = [
     comparePercentage: 23.5,
   },
   {
-    id: 1,
+    id: 4,
     icon: "/assets/images/icon4.svg",
     total: 350.0,
     totalText: "Total Income",
