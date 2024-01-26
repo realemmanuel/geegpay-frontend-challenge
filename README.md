@@ -8,6 +8,14 @@ This is my Geegpay hackathon challenge repository.
 
 - **Supports Darkmode and Light Mode**
 
+- **Notifications Drop Down Menu**
+
+- **Profile Drop Down Menu**
+
+- **Calendar For Filtering**
+
+- **Invoice Modal**
+
 - **Easy To Navigate And Quick**
 
 ## Technologies Used
@@ -21,6 +29,10 @@ This is my Geegpay hackathon challenge repository.
 - **Tailwind CSS:** Styles the user interface with a utility-first approach, making it easy to create responsive and visually appealing designs.
 
 - **Redux:** Manages the global state of the application, ensuring a consistent user experience and facilitating communication between different components.
+
+- **Material UI Icons:** Enhances Next.js 14 frontend with a cohesive set of ready-made, scalable icons.
+
+- **Shadcn UI:** Provides ready-made and customizable UI components for Next.js 14, streamlining development.
 
 
 ## Getting Started
